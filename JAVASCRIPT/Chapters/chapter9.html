@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advance Function</title>
+</head>
+<body>
+
+  <button id="my_button"> click me</button>
+
+
+  <script>
+ 
+    //eventListerner
+    /*
+    let buttonElement = document.querySelector('#my_button');
+
+    let button_behaviour = event => console.log('Button clicked');
+    buttonElement.addEventListener('click', button_behaviour );
+
+    let printDate = event => console.log(new Date());
+    buttonElement.addEventListener('click', printDate);
+
+   buttonElement.removeEventListener('click', button_behaviour);
+    */
+
+    //anonymous function
+    /*
+    let sum = function(x,y){
+      return x+y;
+    }
+    console.log(sum(4,5));
+
+    let newSum = sum;
+    console.log(newSum(6,5));
+    */
+
+    //Anonymous function can be passed as arguments in any other functions
+    /*
+    let sum = function(x,y){
+      return x+y;
+    };
+
+    let sumThreeNumbers = function(x,y,z, sumTwoNumbers){
+      let sum1 = sumTwoNumbers(x,y);
+      return sumTwoNumbers(sum1, z);
+    };
+
+    console.log(sumThreeNumbers(4,9,7,sum));
+    */
+
+    //Arrow function
+    /*
+    let sub = (x,y) => (x-y);
+    console.log(sub(6,7));
+
+    let sq = x => x*x;
+    console.log(sq(5));
+    */
+
+    //setTimeout and setInterval
+    /*
+   let timerId = setTimeout(() => console.log(`Hello ${new Date()}`), 5000); // 5 seconds
+
+    console.log(`Alarm Set with TimerID: ${timerId}`);
+    clearTimeout(timerId); // Clear the timer
+
+
+   let intervalId = setInterval(() => console.log(`Hello ${new Date()}`), 1000);
+   setTimeout(() => clearInterval(intervalId), 5000); // Clear the timer after 5 seconds
+   */
+
+   //for each loop
+   /*
+   let arr = [5,3,4,9,8,7]
+   arr.forEach(num => console.log(num));
+   */
+
+   //array method filter
+   /*
+   let arr = [1,2,3,4,5,6,7,8,9];
+   let odd = arr.filter((num, index) => {
+    if(num % 2 === 1){
+      return true;
+     } else {
+      return false;
+     }
+    });
+
+    console.log(odd);
+
+    let newOdd = arr.filter((num, index) => num % 2 === 1);
+    console.log(newOdd);
+    */
+
+    //map method
+    let arr = [1,2,3,4,5];
+    let sq = arr.map(num => num * num);
+    console.log(sq);
+  
+
+
+  </script>
+  
+</body>
+</html>

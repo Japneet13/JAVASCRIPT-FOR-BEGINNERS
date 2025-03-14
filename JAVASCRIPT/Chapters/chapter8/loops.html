@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>loops</title>
+</head>
+<body>
+  <script>
+    /*
+    //while Loop
+    let num = 1; //initialization
+    while(num <= 10){ //condition
+      console.log(num);
+      num++; //updation
+    }
+    console.log('Final value at which the loop stops is '+ num); //printing the value of num after the loop
+    */
+
+    /*
+    //do while loop
+    let x = 0; //initialization
+    do{
+      console.log(x);
+      x++; //updation
+    } while(x >=5); //condition
+     */
+
+     /*
+    //for loop
+    for(let i = 0; i < 5; i++){
+      console.log(i);
+    }
+    */
+    
+    /*
+    let nums = [4,26,86,24,89,26,37,41];
+    for(let i = 0; i < nums.length; i++){
+      console.log(nums[i]);
+    }
+    */
+
+  
+    /*
+    //accumulator pattern
+    let n = [3,5,4,9,7,6];
+    let sum = 0;
+    for(let i = 0; i < n.length; i++){
+      sum += n[i];
+    }
+    console.log(`sum of the array is ${sum}`);
+
+    //to find squares of numbers in an array
+    let sq = [];
+    for(let i = 0; i < n.length; i++){
+      sq[i] = n[i] * n[i];
+    }
+    console.log(n);
+    console.log(`Squares of the array is ${sq}`);
+
+    //break and continue
+    for(let i = 0; i < 50; i++){
+      console.log(i);
+      if(i == 26){
+        break;
+      }
+    }
+
+    let arr = [1,6,7,3,4,9,5,6,8,9];
+    for(let i = 0; i < arr.length; i++){
+      if(arr [i] == 9){
+        console.log(`element found at index ${i}`);
+        break;
+      }
+      console.log('still looking');
+    }
+    */
+
+    //to print odd numbers between 1 to 25
+    for(let i = 1; i <= 25; i++){
+      if(i % 2 == 0){
+        continue;
+      }
+      console.log(i);
+    }
+    
+
+
+
+
+  </script>
+  
+</body>
+</html>

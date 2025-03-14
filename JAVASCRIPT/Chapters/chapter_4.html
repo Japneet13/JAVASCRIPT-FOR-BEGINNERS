@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if alternatives</title>
+</head>
+<body>
+  <script>
+    let age=31;
+    
+    /*let result;
+    if(age>18){
+      result ='Adult';
+    }else{
+      result='Minor';
+    }*/
+
+    console.log('Tenury operator');
+    //Ternury operator
+    let result = age > 18 ? 'Adult' : 'Minor';
+    console.log(result);
+
+
+    console.log('Guard operator');
+    //Guard operator
+    let age2= 0;
+    let finalAge2= age2 || 18;
+    console.log(age2);
+    console.log(finalAge2);
+
+
+    console.log('Default operator');
+    //Default operator
+    let age3;
+    let finalAge3= age3 ?? 18;
+    console.log(age3);
+    console.log(finalAge3);
+  
+  </script>
+</body>
+</html>

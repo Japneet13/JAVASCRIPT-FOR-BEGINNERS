@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array</title>
+</head>
+<body>
+  <script>
+    /*
+    let nums = [1,2,3,4,5,6,7,5,6,2,4,8];
+    console.log(nums);
+    console.log(nums.length); 
+    console.log(nums[10]);
+
+    let cache = [1, true, null, 'ahugrg'];
+    console.log(cache[1]);
+
+    console.log(typeof cache);
+
+    console.log(Array.isArray(cache));
+
+    let obj = {a: 1, b: 2};
+    console.log(Array.isArray(obj));
+   */
+   /*Push and Pop
+   let arr = [1,2,3]
+   console.log(arr);
+
+   arr.push(4);
+   console.log(arr);
+
+   console.log(`popped ` + arr.pop());
+   console.log(arr);
+   console.log(`popped ` + arr.pop());
+   console.log(arr);
+   */
+
+  //Shift and Unshift
+  let arr2 = [0,1,2,3];
+  console.log(arr2);
+
+  arr2.shift(); //remove the first element
+  console.log(arr2);
+
+  arr2.unshift(5); //add the first element
+  console.log(arr2);
+
+  //splice (to remove an element from a particular position)
+
+  arr2.splice(1,2); //remove the element at index 1 and remove 2 elements
+  console.log(arr2);
+
+ //array to string
+ let arr3 = [3,4,5,2,9,6,8,1,7];
+ console.log(arr3.toString());
+
+ //to sort an array
+ arr3.sort();
+ console.log(arr3);
+
+ //valueOf array
+ console.log(arr3.valueOf()); //copies the array in a different object
+
+ //de-structuring of array
+ let arr = [66,15,25,36,47]
+ let [a,b,c,d] = arr;
+ console.log(a + ' ' + b + ' ' + c + ' ' + d);
+
+  
+  </script>
+  
+</body>
+</html>

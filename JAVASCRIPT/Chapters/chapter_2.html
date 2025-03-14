@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Variables</title>
+</head>
+<body>
+  <h1>Javascript</h1>
+  <button id="click_me" onclick="alert('I am clicked')">Click me</button>
+
+
+  <script>
+    let welcomeMessage = 'Hello Friend';
+    console.log(welcomeMessage);
+
+   //Defining values
+    let bagPrice = (15599 - (10/100 * 15599)) - 272;
+    let jeanPrice = (2499 - (41/100*2499)) - 29;
+    let bagValue = Math.round((bagPrice + jeanPrice + 25 + 20) *118/100)
+    let bagSummary = `Your Final Myntra Bag amount is Rs ${bagValue}`;
+    console.log(bagSummary)
+
+    //Updating Values
+    let a= 5;
+    let b= 5;
+    let money = a+b;
+    console.log(money);
+
+    money += 5; // money = 15
+    console.log(money);
+
+    money -= 3; // money = 12
+    console.log(money);
+
+    money *= 2; // money = 24
+    console.log(money);
+
+    money /= 4; // money = 6
+    console.log(money);
+
+    money ++; // money = 7
+    console.log(money);
+
+  </script>
+</body>
+</html>

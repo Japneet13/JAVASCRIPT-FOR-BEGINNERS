@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>DOM</title>
+</head>
+<body>
+
+  <button class="myButton"> click Me</button><br><hr><br>
+  <div class="myDiv">This is the div </div>
+
+  <script>
+
+    // document.location 
+    console.log(document.location);
+
+    //document.title
+    console.log(document.title);
+
+    //Manipulation of DOM
+    document.title = 'Japneet Kaur';
+    console.log(document.title);
+
+    //document.domain
+    console.log(document.domain);
+
+    //classList
+    console.log(document.querySelector('.myButton').classList);
+
+    //add classList
+    console.log(document.querySelector('.myButton').classList.add('yourButton')); //yourButton class Name is added to the button, check in elements section
+
+    //append a class
+    let button = document.createElement('Button');
+    console.log(document.querySelector('.myDiv').appendChild(button)); 
+
+    button.innerText = 'New Button';
+
+    //to remove child
+    console.log(document.querySelector('.myDiv').removeChild(button)); 
+  </script>
+  
+</body>
+</html>

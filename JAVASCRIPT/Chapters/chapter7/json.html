@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>json</title>
+</head>
+<body>
+  <script>
+    let obj = {
+      name: 'TShirt',
+      price: 100,
+      rating: {
+        stars: 4.5,
+        noOfReviews: 452,
+      },
+    };
+    console.log( typeof obj);
+    console.log(obj);
+
+    let str = JSON.stringify(obj); // object to string 
+    console.log(typeof str);
+    console.log(str);
+
+    let newProduct = JSON.parse(str); // string to object
+    console.log(typeof newProduct);
+    console.log(newProduct);
+
+  </script>
+</body>
+</html>

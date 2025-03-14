@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <script>
+      
+      localStorage.setItem("Name", "Japneet Kaur");
+      localStorage.setItem("Price", "16555");
+
+      console.log(localStorage.getItem('Name'));
+
+      let obj = {
+        name: "TShirt",
+        price: 100,
+        rating: {
+          stars: 4.5,
+          noOfReviews: 452,
+        },
+      };
+
+      localStorage.setItem('obj','product');
+      console.log(localStorage.getItem('obj'));
+
+      localStorage.setItem('obj', JSON.stringify(obj)); // convert obj to string
+      console.log(localStorage.getItem('obj'));
+
+      let obj2 = JSON.parse(localStorage.getItem('obj')); // convert string to obj
+      console.log(obj2);
+
+     //To remove an item from local Storage
+     // localStorage.setItem("Price", "16555");
+     localStorage.removeItem('Price');
+
+     //To remove all items from local Storage
+     localStorage.clear();
+    </script>
+  </body>
+</html>

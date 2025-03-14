@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Practice Set 6</title>
+</head>
+<body>
+
+  <script>
+    // object to represent a product
+    let product = {
+      company: 'MANGO',
+      price: 1000,
+      color: 'red',
+      style: 'casual',
+
+      'delivery-time': '2 days',
+    };
+
+    //object with two references
+    let copyProduct = product;
+    console.log(product);
+
+    copyProduct.color = 'blue';
+    console.log(product);
+
+    copyProduct.style = 'formal';
+    console.log(product);
+
+    console.log(`The item will be delivered in ${product['delivery-time']}`); //bracket notation to display dilivery-time
+    
+
+    //De-structuring
+    let work = {
+      message: 'Good job',
+      status: 'complete',
+    };
+    console.log(work);
+
+    let {message, status} = work;
+    console.log(message);
+    console.log(status);
+
+
+    //function to compare two products
+    function isIdenticalProduct(product1, product2){
+      if(typeof product1 !== 'object' || typeof product2 !== 'object'){
+        console.warn('Parameter passed is not an object');
+        return false;
+      }
+
+      if(product1 == product2){
+        return true;
+      }
+    
+     if(product1.company === product2.company &&
+        product1.color === product2.color &&
+        product1.style === product2.style &&
+        product1.price === product2.price ){
+          return true;
+          } else {
+          return false;
+          }
+    }
+
+    let product1 = {
+      company: 'MANGO',
+      price: 1000,
+      color: 'blue',
+      style: 'casual',
+
+      'delivery-time': '2 days',
+    };
+
+    let product2 = {
+      company: 'MANGO',
+      price: 1000,
+      color: 'red',
+      style: 'casual',
+
+      'delivery-time': '2 days',
+    };
+
+    let product3 = {
+      company: 'MANGO',
+      price: 1000,
+      color: 'red',
+      style: 'casual',
+
+      'delivery-time': '2 days',
+    };
+
+    console.log(isIdenticalProduct(product1, '')); 
+    console.log(isIdenticalProduct(product1, product1));
+    console.log(isIdenticalProduct(product1, product3));
+    console.log(isIdenticalProduct(product3, product2));
+
+
+  </script>
+</body>
+</html>

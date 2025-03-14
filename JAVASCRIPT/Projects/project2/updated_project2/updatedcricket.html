@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="cricket.css" >
+  <title>Cricket Game</title>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <p>Welcome to the Bat Ball Stump Game! Make your move and see if you can beat the computer.</p>
+
+  
+  <!--Bat-->
+  <button class="choice_button click" onclick="
+   let computerChoice = generateComputerChoice();
+   let resultMsg = getResult('Bat', computerChoice);
+   showResult('Bat', computerChoice, resultMsg);">
+   <img src="images/bat.png" alt="Bat" class= "choice_image">
+  </button>
+
+  <!--Ball-->
+  <button class="choice_button click" onclick="
+   computerChoice = generateComputerChoice();
+   resultMsg = getResult('Ball', computerChoice);
+   showResult('Ball', computerChoice, resultMsg);">
+   <img src="images/ball.png" alt="Ball" class="choice_image"></button>
+
+  <!--Stump-->
+  <button class="choice_button click"  onclick="
+   computerChoice = generateComputerChoice();
+   resultMsg = getResult('Stump', computerChoice);
+   showResult('Stump', computerChoice, resultMsg);">
+   <img src="images/stump.png" alt="stump" class="choice_image"></button>
+
+
+  <h3 id="user_move"></h3>
+  <h3 id="computer_move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+  <button class="reset_rules" onclick="localStorage.clear(); 
+   resetScore();" >Reset</button>
+
+  <!---
+   <button class="reset_rules rules" style="vertical-align:middle"><span>Show Rules</span></button>
+
+  
+  <div id="rules_model" class="model" style="display:block;">
+    <div class="game_content">
+      <span class="close">x</span>
+      <h2>Game Rules</h2>
+      <ul>
+        <li><strong>Bat vs. Ball:</strong> Bat wins against Ball.</li>
+        <li><strong>Ball vs. Stump:</strong> Ball wins against Stump.</li>
+        <li><strong>Stump vs. Bat:</strong> Stump wins against Bat.</li>
+        <li>If both the user and the computer select the same option, it's a tie.</li>
+        <li>The objective is to win more rounds than the computer.</li>
+      </ul>
+    </div>
+  </div>
+-->
+
+
+
+ <script>
+
+    
+  let scoreStr = localStorage.getItem('Score');
+  let score;
+
+  resetScore(scoreStr);
+
+  function resetScore(scoreStr){
+    score = scoreStr ? JSON.parse(scoreStr) :  {
+      win: 0,
+      lost: 0,
+      tie: 0,
+     };
+      score.displayScore = function () {
+      return `Score = Won: ${score.win}, Lost: ${score.lost}, Tie: ${score.tie}.`;
+    };
+    showResult();
+  }
+
+  function generateComputerChoice(){
+    let randomNumber = Math.random() * 3; //This will generate random number between 0 to 3
+  if (randomNumber <= 1) {
+    return 'Bat';
+  } else if (randomNumber <= 2) {
+    return 'Ball';
+  } else {
+    return 'Stump';
+  }
+ }
+
+ function getResult(userMove, computerMove){
+
+  if(userMove === 'Bat'){
+    if(computerMove === 'Ball') {
+      score.win ++;
+      return 'You Won';
+      } else if(computerMove === 'Stump') {
+        score.lost ++;
+       return 'Computer won';
+       } else {
+        score.tie ++;
+        return `It's a Tie!`;
+        }
+  } else if(userMove === 'Ball'){
+    if(computerMove === 'Stump') {
+      score.win ++;
+      return 'You Won';
+      } else if(computerMove === 'Bat') {
+        score.lost ++;
+       return 'Computer won';
+       } else {
+        score.tie ++;
+        return `It's a Tie!`;
+        }
+  } else {
+    if(computerMove === 'Bat') {
+      score.win ++;
+      return 'You Won';
+      } else if(computerMove === 'Ball') {
+        score.lost ++;
+       return 'Computer won';
+       } else {
+        score.tie ++;
+        return `It's a Tie!`;
+       }
+    }
+  }
+
+  function showResult(userMove, computerMove, result){
+
+    localStorage.setItem('Score', JSON.stringify(score));
+
+    document.querySelector('#user_move').innerText = userMove ? `You have chosen ${userMove}` : '';
+
+    document.querySelector('#computer_move').innerText = computerMove ? `Computer has chosen ${computerMove}` : '';
+
+    document.querySelector('#result').innerText = result || '';
+
+    document.querySelector('#score').innerText = score.displayScore();
+
+  }
+
+ </script> 
+</body>
+</html>

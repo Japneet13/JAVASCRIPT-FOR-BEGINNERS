@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>objects</title>
+</head>
+<body>
+
+  <script>
+    /*let product = {
+      company: "Apple",
+      'item-name': "Phone",
+      price: 1000000,
+      color: "black",
+    };
+    console.log(product);
+    console.log(product.company);
+    console.log(product.price);
+
+    console.log(product['item-name']);
+
+    product.company = "Samsung";
+    console.log(product);
+
+    delete product.company;
+    console.log(product);
+    */
+
+
+    //Nested Objects
+    /*
+    let product = {
+      company: "Apple",
+      item_name: "Phone",
+      price: 1000000,
+      color: "black",
+
+      displayPrice: function() {
+        console.log(`The price of ${this.item_name} is Rs.${this.price} `);
+      }
+    };
+    product.displayPrice();
+    
+
+    let a = 5;
+    let b = a; 
+    console.log(`a = ${a}, b = ${b}`); 
+    a = 10;
+    console.log(`a = ${a}, b = ${b}`); 
+
+
+
+    let x = {num: 5}
+    let y = x;
+    console.log(`x = ${x.num}, y = ${y.num}`);
+
+    x.num = 9;
+    console.log(`x = ${x.num}, y = ${y.num}`);
+
+    let p = {pop: 'jk'};
+    let q = {pop: 'jk'};
+    console.log(p === q); // false bcuz memory address is not same
+   */
+
+   // object de-structuring
+   let product = {
+    company: "Apple",
+    item_name: "Phone",
+    price: 1000000,
+    color: "black",
+  };
+
+  let {company, item_name, price, color} = product;
+  console.log(company);
+  console.log(item_name);
+  console.log(price);
+
+  </script>
+</body>
+</html>

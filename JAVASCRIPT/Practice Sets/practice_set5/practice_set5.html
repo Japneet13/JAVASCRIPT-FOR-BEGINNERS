@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Set 5</title>
+</head>
+<body>
+  <script>
+    // Check if number is odd or even
+    function checkOddEven(num){
+      if(num % 2 == 0){
+        return 'Even Number';
+      } else {
+      return 'Odd Number';
+      }
+    }
+    console.log(checkOddEven(12));
+
+    //Return the larger of the two number
+    function largerNumber(a, b){
+      /*
+      if(a > b){
+        return `${a} is Larger than ${b}`;
+      } else if (a < b){
+        return `${b} is larger than ${a}`;
+      } else {
+        return `Both numbers are equal`;
+      }
+        */
+      return (a > b) ? `a` : `b`;
+    } 
+    console.log(largerNumber(7,75));
+
+    // Celsius to Fahrenheit 
+    function celsiusToFahrenheit(c){
+      return (c * 9/5) + 32;
+    }
+    console.log(celsiusToFahrenheit(56));
+  
+
+  </script>
+</body>
+</html>

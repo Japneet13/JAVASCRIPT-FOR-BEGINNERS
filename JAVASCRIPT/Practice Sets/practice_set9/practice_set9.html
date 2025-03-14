@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .button{
+      height:50px;
+      width:180px;
+      background-color: rgb(218, 43, 78);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .js_size_double{
+      height:100px;
+      width:260px;
+      font-size: 40px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+ <title>Practice Set 9</title>
+</head>
+<body>
+  <button class="button" onclick="
+  //setTimeout(doubleTheSize, 2000);
+  " >Click Me</button>
+
+
+
+  <script>
+
+  //anonyms function
+  let multiply = (num1, num2) => (num1 * num2);
+  console.log(multiply(2,3));
+
+  //pass a function in another function as an argument
+  let printGreeting = () => console.log('Hello');
+  let runTwice = inputFunction => {
+    inputFunction();
+    inputFunction();
+  };
+   runTwice(printGreeting);
+
+   //double the size of the button using onclick
+   function doubleTheSize(){
+    let buttonElement = document.querySelector('.button');
+    buttonElement.classList.add('js_size_double');
+   }
+
+   //double the size using eventListener
+   let buttonElement = document.querySelector('.button');
+    buttonElement.addEventListener('click', event =>
+    setTimeout(doubleTheSize, 2000))
+
+    //find sum of an array using foreach loop
+    let arr =[1,2,3,4,5];
+    let sum = 0;
+    arr.forEach(num => sum += num);
+
+    console.log(sum);
+
+    //find squares of the elements in the array using map
+    let arr2 = [1,2,3,4,5];
+    let sq = arr2.map(num => num * num);
+    console.log(sq);
+
+  </script>
+</body>
+</html>
